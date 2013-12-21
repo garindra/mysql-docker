@@ -11,7 +11,7 @@ RUN apt-get clean
 RUN sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
 
 # Allow root from non localhost IPs
-RUN /usr/sbin/mysqld & sleep 10s && mysql --host=127.0.0.1 --user=root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"
+RUN /usr/sbin/mysqld & sleep 10s && mysql --host=127.0.0.1 --user=root -e "CREATE DATABASE development_db; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"
 
 EXPOSE 3306
 
