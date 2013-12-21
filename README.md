@@ -3,7 +3,7 @@ mysql-docker
 
 ![docker mysql logo][1]
 
-Fully usable MySQL-in-a-container for dev environment with a `root` user and no password. Exposes port `3306`. Accessible from remote host.
+Fully usable MySQL-in-a-container for dev environment with a `root` user and no password. Exposes port `3306`. Contains a single database named `development_db`. Accessible from remote host. 
 
 Docker Index official page: https://index.docker.io/u/garindra/mysql-docker/
 
